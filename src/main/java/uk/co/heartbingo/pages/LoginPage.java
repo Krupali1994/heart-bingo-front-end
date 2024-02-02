@@ -19,9 +19,6 @@ public class LoginPage extends Utility {
     @FindBy(linkText = "Log In")
     WebElement loginLink;
 
-    @CacheLookup
-    @FindBy(xpath = "//p[contains(text(), 'Log In to start playing.')]")
-    WebElement logInToStartPlayingText;
 
     public void clickOnCookiesButton() {
         clickOnElement(cookiesButton);
@@ -33,9 +30,4 @@ public class LoginPage extends Utility {
         log.info("Clicking on login link : " + loginLink.toString());
     }
 
-    public String getLogInToStartPlayingText() {
-        String message = getTextFromElement(logInToStartPlayingText);
-        log.info("Getting text from : " + logInToStartPlayingText.toString());
-        return message;
-    }
 }
